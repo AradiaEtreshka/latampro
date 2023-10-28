@@ -9,8 +9,6 @@ import java.util.List;
 
 @Entity
 @Table(name="usuarios")
-@Getter
-@Setter
 @NoArgsConstructor
 public class AppUser {
 
@@ -51,6 +49,82 @@ public class AppUser {
         this.puntaje = puntaje;
         this.pais = pais;
     }
+
+    //Getters and Setters
+
+    public void setNickname() {
+        this.nickname = nickname;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setEmail() {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setPassword() {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setRole() {
+        this.role = role;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setChallenges() {
+        this.challenges = challenges;
+    }
+
+    public List<Challenge> getChallenges() {
+        return challenges;
+    }
+
+    public void setPuntaje() {
+        this.puntaje = puntaje;
+    }
+
+    public Long getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPais() {
+        this.pais = pais;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    //toString
+
+    @Override
+
+    public String toString() {
+        return "AppUser{" +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role=" + role +
+                ", challenges=" + challenges +
+                ", puntaje=" + puntaje +
+                ", pais='" + pais + '\'' +
+                '}';
+    }
+
 
 
 

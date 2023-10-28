@@ -14,7 +14,7 @@ import java.util.List;
 public class AppUserDTO {
 
     private Long id;
-    private String name;
+    private String nickname;
     private String email;
     private String password;
     private Role role;
