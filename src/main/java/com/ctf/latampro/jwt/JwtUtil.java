@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import static io.jsonwebtoken.Jwts.*;
+
 @Component
 public class JwtUtil {
 
@@ -35,7 +37,7 @@ public class JwtUtil {
     }
 
     private Claims extractAllClaims(String token) {
-        return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
+        return parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
     }
 
     public String generateToken(UserDetails userDetails) {
@@ -44,7 +46,7 @@ public class JwtUtil {
     }
 
     private String createToken(Map<String, Object> claims, String subject) {
-        return Jwts.builder()
+        return builder()
                 .setClaims(claims)
                 .setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
                 //.setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 +60 * 10))
