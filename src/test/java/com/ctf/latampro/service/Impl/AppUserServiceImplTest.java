@@ -2,6 +2,7 @@ package com.ctf.latampro.service.Impl;
 
 import com.ctf.latampro.exceptions.ResourceNotFoundException;
 import com.ctf.latampro.model.dto.AppUserDTO;
+import com.ctf.latampro.service.AppUserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppUserServiceImplTest {
 
     @Autowired
-    private AppUserServiceImpl appUserService;
+    private AppUserService appUserService;
 
 
     @Test
